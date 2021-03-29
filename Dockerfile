@@ -14,8 +14,7 @@ RUN mkdir -p images/faces images/helms images/skins images/renders images/capes
 
 ARG VERBOSE_TEST
 ARG DEBUG
-RUN nohup redis-server & npm test
-
+RUN nohup redis-server &
 
 FROM node:12-alpine
 RUN apk --no-cache add cairo pango jpeg giflib
